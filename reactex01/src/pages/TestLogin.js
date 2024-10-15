@@ -46,10 +46,13 @@ export const TestLogin = () => {
 const PROXY ='/proxy';
 
 
+            
   let data={"id":id};
 
             let headers={"content-type":"applcation/json"}
-
+            console.log(PROXY);
+            console.log(PROXY+'/testlogin2');
+            
             axios.post(PROXY+'/testlogin2',data,{headers}).then((res) => {
 
                 alert("왓더퍽")
