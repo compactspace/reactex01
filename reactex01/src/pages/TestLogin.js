@@ -15,11 +15,13 @@ export const TestLogin = () => {
 
     const Login = async () => {
 
-     
+      await axios.get('/').then((res)=>{
+       console.log(JSON.stringify(res.data));
+      })
         
         if (id != undefined && id != null) {
 
-
+//'/testlogin?id=' + id
          await axios.get('/testlogin?id=' + id).then((res) => {
     alert("왓더??");
               alert(JSON.stringify(res));
