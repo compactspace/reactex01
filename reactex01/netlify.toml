@@ -2,3 +2,9 @@
     from = "/*"
     to = "/index.html"
     status = 200
+
+    [[redirects]]
+from = "/proxy/*"
+  to = "https://localhost:4000/:splat"  
+  status = 200
+  force = true
