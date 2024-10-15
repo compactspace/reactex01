@@ -23,21 +23,23 @@ export const TestLogin = () => {
             axios.get('/testlogin?id=' + id).then((res) => {
     alert("왓더??");
               alert(JSON.stringify(res));
-                if (res.data.status != -1) {
-                    window.localStorage.setItem("id", id);
+             console.log(JSON.stringify(res));
+               console.log(JSON.stringify(res.data));
+                // if (res.data.status != -1) {
+                //     window.localStorage.setItem("id", id);
 
-                    if (res.data.teacher != null && res.data.teacher != undefined) {
-                        window.localStorage.setItem("teacher", "teacher");
-                        window.localStorage.setItem("onedayclass_num",3);                        
-                        navi('/openclass');
-                        return;
-                    }
-                    navi('/main2')
+                //     if (res.data.teacher != null && res.data.teacher != undefined) {
+                //         window.localStorage.setItem("teacher", "teacher");
+                //         window.localStorage.setItem("onedayclass_num",3);                        
+                //         navi('/openclass');
+                //         return;
+                //     }
+                //     navi('/main2')
 
-                } else {
-                    alert("아디디는 신원찬 이라니깐?");
+                // } else {
+                //     alert("아디디는 신원찬 이라니깐?");
 
-                }
+                // }
 
 
             }).catch((err)=>{
