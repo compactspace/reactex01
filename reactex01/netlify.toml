@@ -3,3 +3,8 @@
     to = "/index.html"
     status = 200
 
+[[redirects]]
+from = "/proxy/*"
+  to = "http://localhost:4000:splat"  
+  status = 200
+  force = true
