@@ -83,12 +83,10 @@ import { UseStateChangeEx01 } from '../syntax/6강arrayobjectstate변경하는 �
 
 import { MapEx01 } from '../syntax/9강map많은 div들을 반복문으로 줄이고 싶은 충동이 들 때/MapEx01'
 
-import { AxiosEx01 } from '../syntax/서버와통신하기/AxiosEx01'
-import { AxiosEx02 } from '../syntax/서버와통신하기/AxiosEx02'
-import { AxiosEx03 } from '../syntax/서버와통신하기/AxiosEx03'
-import { AxiosEx04 } from '../syntax/서버와통신하기/AxiosEx04'
-import { AxiosEx05 } from '../syntax/서버와통신하기/AxiosEx05'
-import { AxiosEx06 } from '../syntax/서버와통신하기/AxiosEx06.js'
+
+
+
+
 import { ReduxEx01 } from '../syntax/리덕스리덕스툴킷/ReduxEx01.js'
 import { ReduxEx02 } from '../syntax/리덕스리덕스툴킷/ReduxEx02.js'
 import { ReduxEx03 } from '../syntax/리덕스리덕스툴킷/ReduxEx03.js'
@@ -331,12 +329,10 @@ function StartRouter2() {
             <Route path="/UseEffectFncEx04" element={<UseEffectFncEx04></UseEffectFncEx04>} ></Route>
 
 
-            <Route path="/AxiosEx01" element={<AxiosEx01></AxiosEx01>} />
-            <Route path="/AxiosEx02" element={<AxiosEx02></AxiosEx02>} />
-            <Route path="/AxiosEx03" element={<AxiosEx03></AxiosEx03>} />
-            <Route path="/AxiosEx04" element={<AxiosEx04></AxiosEx04>} />
-            <Route path="/AxiosEx05" element={<AxiosEx05></AxiosEx05>} />
-            <Route path="/AxiosEx06" element={<AxiosEx06></AxiosEx06>} />
+     
+
+
+              
             <Route path="/ReduxEx01" element={<ReduxEx01></ReduxEx01>} />
             <Route path="/ReduxEx02" element={<ReduxEx02></ReduxEx02>} />
             <Route path="/ReduxEx03" element={<ReduxEx03></ReduxEx03>} />
