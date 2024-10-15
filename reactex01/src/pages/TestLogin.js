@@ -2,7 +2,7 @@
 import axios from "axios"
 import { useNavigate } from "react-router-dom";
 axios.defaults.headers['Access-Control-Allow-Origin'] = '*';
- axios.defaults.baseURL = "http:210.220.163.82:4000";
+ axios.defaults.baseURL = "http:192.168.0.52:4000";
 export const TestLogin = () => {
     let navi = useNavigate();
 
@@ -20,7 +20,7 @@ export const TestLogin = () => {
         if (id != undefined && id != null) {
 
 
-            axios.get('http:210.220.163.82:4000/testlogin?id=' + id).then((res) => {
+            axios.get('http:192.168.0.52:4000/testlogin?id=' + id).then((res) => {
 
                 alert("?")
                 if (res.data.status != -1) {
