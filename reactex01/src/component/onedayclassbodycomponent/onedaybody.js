@@ -359,7 +359,8 @@ padding-top: 30px !important;
 `
 
 
-
+axios.defaults.headers['Access-Control-Allow-Origin'] = '*';
+ axios.defaults.baseURL = "https:192.168.0.52:4000";
 
 export const OneDayClassBody = (props) => {
 
@@ -468,7 +469,7 @@ export const OneDayClassBody = (props) => {
                 console.log(choiceforforDB);
                 setChoiceforforDB(choiceforforDB);
                 //주의 해라,, 지금 계속 요청하면 express 서버에서 Error: Too many connections 에러를 뿜는다.
-                axios.get('http://localhost:4000/noneuser/checkoutrest?onedayclass_num=' + `${props.onedayclass_num}` + '&openday=' + `${choiceforforDB}`)
+                axios.get('/noneuser/checkoutrest?onedayclass_num=' + `${props.onedayclass_num}` + '&openday=' + `${choiceforforDB}`)
                     .then((result) => {
 
                         let rest = result.data.rest;
@@ -512,7 +513,7 @@ export const OneDayClassBody = (props) => {
             })
         }
         //개별 페이지 리뷰
-        axios.get('http://localhost:4000/user/reivew?limit=0 &onedayclass_num=' + `${props.onedayclass_num}`
+        axios.get('/user/reivew?limit=0 &onedayclass_num=' + `${props.onedayclass_num}`
 
 
         ).then((res) => {
@@ -587,7 +588,7 @@ export const OneDayClassBody = (props) => {
             let limit = (`${review.buttoncnt}`);
 
 
-            axios.get('http://localhost:4000/user/nextreivew?limit=' + limit + '&onedayclass_num=' + `${props.onedayclass_num}`
+            axios.get('/user/nextreivew?limit=' + limit + '&onedayclass_num=' + `${props.onedayclass_num}`
 
 
             ).then((res) => {
