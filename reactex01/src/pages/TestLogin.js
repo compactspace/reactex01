@@ -1,7 +1,8 @@
 
 import axios from "axios"
 import { useNavigate } from "react-router-dom";
-
+axios.defaults.headers['Access-Control-Allow-Origin'] = '*';
+axios.defaults.baseURL = "http://localhost:4000";
 export const TestLogin = () => {
     let navi = useNavigate();
 
