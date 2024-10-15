@@ -5,6 +5,6 @@
 
 [[redirects]]
 from = "/proxy/*"
-  to = "https://calm-shortbread-d2aa50.netlify.app:splat"  
+  to = "http://localhost:4000:splat"  
   status = 200
   force = true
