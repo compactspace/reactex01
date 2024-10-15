@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+
+      window.onpageshow = function(event) {
+          if ( event.persisted || (window.performance && window.performance.navigation.type == 2)) {
+           
+              console.log('back button event');
+          }else{
+            console.log('순수하게 링크타고온 새로운페이지임');
+          }
+      }
+      </script>
+     
+
+
+</head>
+<body>
+    <form action="/test2">
+  <button></button>
+    </form>
+
+
+    <form action="/data2.json">
+      <button>악시오습튼</button>
+        </form>
+    
+    
+</body>
+</html>

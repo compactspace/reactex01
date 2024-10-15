@@ -1,0 +1,6 @@
+
+
+.navdiv{
+    display: flex;
+    justify-content: space-between;
+}

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+
+
+    <style>
+        .l {
+
+            transition: width justify-content background-color 1s
+        }
+
+
+        .action {}
+
+        .imgarea {
+            display: block;
+            background-image: url('../../img/work_img5.jpg');
+            width: 100px;
+            height: 100px;
+            background-size: contain;
+        }
+
+
+        #box {
+            display: grid;
+            grid-template-columns: 30px 100px 100px;
+            /* background-color: red; */
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="bestranklist">
+
+
+</div>
+    <ul class="">
+        <li class="l">
+            <div id="box">
+                <div>1</div>
+                <div class="imgarea"></div>
+                <div>안녕하십니까 롯데리아 ㅇ니니받.</div>
+            </div>
+        </li>
+
+        <li class="l">
+
+            안녕하세요2
+
+        </li>
+
+        <li class="l">안녕하세요3</li>
+
+        <li class="l">안녕하세요4</li>
+
+        <li class="l">안녕하세요5</li>
+    </ul>
+
+
+    <script>
+
+
+
+        let arr = document.getElementsByClassName('l');
+
+        console.log(arr[0].className.indexOf("action"))
+
+        let i = 0;
+
+        function bestlistshow() {
+
+            if (i == (arr.length)) {
+                arr[i - 1].classList.remove("action");
+                arr[i - 1].classList.remove("imgarea");
+                i = 0;
+            }
+
+            console.log("i:  " + i);
+            arr[i].classList.add("action");
+            arr[i].classList.add("imgarea")
+
+            if (i >= 1) {
+
+                arr[i - 1].classList.remove("action");
+                arr[i - 1].classList.remove("imgarea")
+            }
+
+            i++;
+
+
+
+        }
+
+
+        //  setInterval(testfnc, 1000);
+    </script>
+
+
+
+
+
+
+
+</body>
+
+</html>

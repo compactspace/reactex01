@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        #translatex {
+            width: 400px;
+            height: 400px;
+            background-color: red;
+
+        }
+    </style>
+    <script>
+
+        window.onload = () => {
+
+            let  target= document.getElementById('translatex');
+            target.addEventListener('click',(e)=>{
+
+
+                target.style.cssText=`transform:translateX(50%);`
+
+
+            })
+
+
+        }
+
+    </script>
+
+
+</head>
+
+<body>
+
+    <div id="translatex">트렌스 x축!!</div>
+
+</body>
+
+</html>

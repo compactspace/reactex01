@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+    <script>
+
+        let arr =
+            [{ 'connection': true, "id": "원찬1" }
+
+                , { 'connection': true, "id": "원찬2" }
+
+                , { 'connection': false, "id": "원찬3" }
+
+                , { 'connection': true, "id": "원찬4" }
+            ]
+
+        let i = 0;
+        let key1 = 'connection'
+        let key2 = "id"
+        for (let x of arr) {
+
+            if (!x[key1]) {
+                console.log(`연걸이 ${x[key1]} 한 유저 ${x[key2]} 임`);
+                arr.splice(i, 1);
+            }
+            i++;
+        } console.log(arr)
+
+
+
+
+
+
+
+        //         const array = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+        //         const removed = array.splice(2, 2);
+
+        // console.log('removed', removed);
+
+        // console.log('array', array);
+
+        // console.log(array==removed);
+
+
+
+    </script>
+
+
+</head>
+
+<body>
+
+</body>
+
+</html>

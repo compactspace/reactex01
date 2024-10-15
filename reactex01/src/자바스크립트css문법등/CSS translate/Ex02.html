@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <style>
+        body {
+            padding: 0px 0px;
+            margin: 0px 0px;
+        }
+
+
+        p {
+
+            color: #fff;
+            font-size: 36px;
+        }
+
+
+        #allwrapper {
+            position: relative;
+            height: 999px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+
+        #banner {
+            position: fixed;
+            inset: auto;
+            background-image: url('../../img/coock.jpg');
+            background-repeat: no-repeat;
+            height: 991px;
+            width: 100%;
+            background-size: 100% 991px;
+        }
+
+        #targetwrapper {
+            position: relative;
+            top: 495px;
+
+            margin: 0 auto;
+            width: 400px;
+            height: 400px;
+        }
+
+        .target {
+            width: 400px;
+            height: 400px;
+
+            /* background-color: red; */
+        }
+
+        #center{
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+    <script>
+
+
+
+
+        window.onload = () => {
+            let targetwrapper = document.getElementById('targetwrapper');
+            let targetwrapperTop = targetwrapper.scrollTop;
+
+            console.log("탑:  " + targetwrapperTop);
+
+
+
+            let banner = document.getElementById('banner');
+
+            let bannerheigth = 991 / 2;
+
+            console.log("베너 높이의길이:  " + bannerheigth);
+
+
+
+            let elements = document.getElementsByClassName('target')
+
+            target1 = document.getElementById('target1');
+
+
+
+            //HTMLCollection(5) 타입
+            let targetarr = document.getElementsByClassName('target');
+
+
+
+            window.addEventListener('scroll', () => {
+
+
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop; // 현재 스크롤 위치
+
+
+
+                console.log(scrollTop);
+
+                for (let i = 0; i < targetarr.length; i++) {
+
+                    targetarr[i].style.cssText = 'transform:translateY(-' + scrollTop + 'px);'
+
+                }
+
+                console.log(scrollTop)
+                if (scrollTop > 1000) {
+                    banner.style.cssText = 'position:relative; top:800px;'
+                    return;
+                }
+                else {
+                    banner.style.cssText = 'position:fixed'
+                }
+
+
+            });
+
+
+
+
+
+        }
+
+
+
+
+
+
+    </script>
+
+</head>
+
+<body>
+
+
+    <div id="allwrapper">
+
+        <div id="banner">
+
+
+            <div id="targetwrapper">
+                <div id="target1" class="target" id="b1">
+
+                    <p>
+                        매주마다 뭐할까 고민인가요??
+
+                    </p>
+                    <p>
+                        이제 고민 마세요 뭐할까? 에서 취미생활을 찾아보세요
+
+                    </p>
+
+                </div>
+                <div class="target" id="b2">
+                    <p>
+                        하하하 안녕하십니까2
+
+                    </p>
+                    <p>
+                        css 지옥에 온걸 환영합니다.2
+
+                    </p>
+                </div>
+                <div class="target" id="b3">
+
+                    <p>
+                        하하하 안녕하십니까3
+
+                    </p>
+                    <p>
+                        css 지옥에 온걸 환영합니다.3
+
+                    </p>
+
+                </div>
+                <div class="target" id="b4">
+
+                    <p>
+                        하하하 안녕하십니까4
+
+                    </p>
+                    <p>
+                        css 지옥에 온걸 환영합니다.4
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+        <div id="center">
+<div class="info">
+    <h2>뭐할까</h2>
+
+</div>
+<div class="info">
+
+    <h2>뭐할까</h2>
+</div>
+        </div>
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+</body>
+
+</html>

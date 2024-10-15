@@ -1,0 +1,185 @@
+@media (max-width: 360px){
+    body {
+     
+       
+     }
+    
+    .alldivwrapper{
+       margin-left:0px !important;
+       margin-right:0px !important;
+       width: 100% !important;
+    }
+    
+   
+    
+    #loginformwrappe{
+    width: 100%!important;
+    }
+    
+   }
+   
+   
+   
+   
+   
+   
+   /* 이미지 태그의 직계 할머니 포지션을 타겟으로 해야해서
+       포지션 릴레이티브 주자
+       */
+       
+       .divwrapper{
+         min-height: 100vh;
+       box-orient: vertical;
+       width: 100%;
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       
+       }
+       
+       
+       
+   .alldivwrapper {
+       width: 500px;
+       position: relative;
+       margin-left: auto;
+       margin-right: auto;
+   }
+   
+   .imgdiv {
+       /* padding-top: 150px; */
+   }
+   
+   /* #	r {
+       height: 900px;
+       width: 500px;
+       border: 1px solid #ddd
+   } */
+   
+   #imgone {
+       position: absolute;
+       right: 0px;
+       top: 25px;
+       height: 200px;
+       width: 200px;
+   }
+   
+   .loginform {
+       height: 100%;
+       border: 1px solid #666;
+       border-radius: 4px;
+   }
+   
+   
+              #loginformwrapper>span{
+             color: #444;
+       font-size: 35px;
+       font-weight: 600;
+       line-height: 90px;
+              }
+   
+   .container {
+       display: flex;
+       flex-direction: column;
+   }
+   
+   .passwordinput, .idinput {
+       background-color: rgb(232, 240, 254);
+       border: none;
+       border-bottom: 1px solid #bdbdbd;
+       width: 100%;
+       height: 50px;
+   }
+   
+   h3 {
+       color: #797979;
+   }
+   
+   .iddiv, .passworddiv {
+       margin-left: auto;
+       margin-right: auto;
+       width: 95%;
+   }
+   
+   .logindiv, .membershipdiv {
+       padding-top: 10px;
+       padding-bottom: 10px;
+       margin-left: auto;
+       margin-right: auto;
+       width: 95%;
+       height: 40px;
+       border: none;
+       background-color: #1a70dc;
+       color: aliceblue;
+       line-height: 35px;
+   }
+   
+   .loginbtn {
+       padding-top: 10px;
+       padding-bottom: 50px;
+       margin-left: auto;
+       margin-right: auto;
+       width: 95%;
+       height: 40px;
+       border: none;
+       background-color: #1a70dc;
+       color: aliceblue;
+       line-height: 35px;
+   }
+   
+   .kakaologindiv {
+       padding-top: 10px;
+       padding-bottom: 10px;
+       margin-left: auto;
+       margin-right: auto;
+       width: 95%;
+       height: 40px;
+       border: none;
+       background-color: #fee500;
+       line-height: 35px;
+   }
+   
+   .gohmoe{
+       padding-top: 10px;
+       padding-bottom: 40px;
+       margin-left: auto;
+       margin-right: auto;
+       width: 95%;
+       height: 40px;
+       border: none;
+       line-height: 35px;
+   }
+   
+   #gohmoeicon{
+       width: 110px;
+   }
+   
+   
+   
+   
+   
+   #naver{
+   
+       border: none;
+       background-color: transparent;
+       color: aliceblue;
+       
+   
+   }
+   
+   .naverlogindiv {
+       padding-top: 10px;
+       padding-bottom: 10px;
+       margin-left: auto;
+       margin-right: auto;
+       width: 95%;
+       height: 40px;
+       border: none;
+       color: aliceblue;
+       background-color: #03c75a;
+       line-height: 35px;
+   }
+   
+   .login_membershipdivwrapper {
+       text-align: center;
+   }

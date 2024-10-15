@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            padding: 0px 0px;
+
+            margin: 0px 0px;
+        }
+
+
+
+        .swiperallwrapper {
+            padding-top: 1486px;
+
+            height: 991px;
+            /* max-width: 1287px; */
+            width: 100vw;
+        }
+
+        .swipercontainerwrapper {
+            position: fixed;
+            margin: auto;
+            inset: 0px auto auto -10px;
+            box-sizing: border-box;
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper_container {
+
+            height: 100%;
+            width: 100%;
+        }
+
+        .banner {
+            height: 100%;
+            width: 100%;
+            background-image: url('../../../public/newbanner/main_16550885880.jpg');
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+
+        .rollringinfobanner {
+
+            position: absolute;
+            width: 40%;
+            min-width: 700px;
+            z-index: 2;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background-color: red;
+            display: flex;
+            flex-direction: column;
+
+        }
+
+
+        .rolling {
+            position: absolute;
+            display: none;
+        }
+
+        .rolling p {
+            color: #fff;
+            font-size: 36px;
+        }
+
+        #main {
+            margin: 0 auto;
+            position: relative;
+            width: 100%;
+            /* background-color: red; */
+        }
+
+        .mainwraperr>div {
+
+            position: relative;
+            width: 100%;
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        .list_box {
+            padding: 50px 0;
+        }
+
+        .list_1_wrapper {
+            position: relative;
+            width: 100%;
+            max-width: 1280px;
+            margin: 0 auto;
+            display: grid;
+            height: 291px;
+            grid-template-rows: 100%;
+            grid-template-columns: 50% 50%;
+            text-align: center;
+            margin-top: 40px !important;
+
+        }
+
+        .list_swiper {
+
+            height: 400px;
+            grid-template-rows: 100%;
+            display: grid;
+            grid-template-columns: 300px 300px 300px 300px;
+            grid-gap: 20px;
+        }
+
+        .list_swiper_img_area {
+            background-image: url('../../img/coffieimg1.jpg');
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+        }
+    </style>
+
+    <script>
+
+        window.onload = () => {
+            
+            const windowHeight = window.innerHeight; // 브라우저 창의 높이
+            const scrollHeight = document.documentElement.scrollHeight; // 문서 전체의 높이
+            const banner = document.getElementById('swipercontainerwrapper');
+            const rolling = document.getElementsByClassName("rolling");
+            const rollringinfobanner = document.getElementsByClassName('rollringinfobanner')[0];
+            window.addEventListener('scroll', () => {
+               // console.log(rollringinfobanner.getBoundingClientRect().top)
+                let scrollTop = window.pageYOffset || document.documentElement.scrollTop; // 현재 스크롤 위치
+                let rollingheight = rollringinfobanner.getBoundingClientRect().top
+                console.log("현재 스크롤위치: " + scrollTop + " 롤링의 절대위치: " + rollingheight);
+
+
+                if (scrollTop >= 1510) {
+                    banner.style.cssText = `position:relative`;
+
+                } else {
+                    banner.style.cssText = `position:fixed`;
+                }
+
+
+
+                for (let k = 0; k < rolling.length; k++) {
+
+                    if (scrollTop < 487) {
+
+                        rolling[0].style.cssText = 'display:block; transform:translateY(-' + scrollTop + 'px)';
+
+                        rolling[1].style.cssText = 'display:none';
+                        rolling[2].style.cssText = 'display:none';
+                    } else if (487 < scrollTop && scrollTop < 800) {
+                        rolling[0].style.cssText = 'display:none';
+                        rolling[2].style.cssText = 'display:none';
+                        //   console.log((rolling[1].getBoundingClientRect().top));
+                        rolling[1].style.cssText = 'display:block; transform:translateY(-' + (scrollTop - rollingheight) + 'px)';
+                    } else if (800 < scrollTop && scrollTop < 1500) {
+
+                        rolling[1].style.cssText = 'display:none';
+                        rolling[2].style.cssText = 'display:block; transform:translateY(-' + (scrollTop - (2 * rollingheight)) + 'px)';
+                    }
+
+
+                    // rolling[k].style.cssText = 'transform:translateY(-' + ((k + k * 2) * scrollTop) + 'px);'
+                    // rolling[k].style.cssText = 'top: -'+((k+2)*scrollTop)+"px";
+
+                }
+
+
+
+
+            })
+
+
+        }
+
+
+
+    </script>
+
+</head>
+
+<body>
+    <div class="swiperallwrapper">
+
+        <div id="swipercontainerwrapper" class="swipercontainerwrapper">
+
+            <div class="swiper_container">
+                <div class="banner"></div>
+
+            </div>
+
+            <div class="rollringinfobanner">
+                <div class="rolling">
+                    <p>
+                        매주마다 뭐할까 고민인가요??
+
+                    </p>
+                    <p>
+                        이제 고민 마세요 뭐할까? 에서 취미생활을 찾아보세요
+
+                    </p>
+
+                </div>
+                <div class="rolling">
+                    <p>
+                        하하하 안녕하십니까2
+
+                    </p>
+                    <p>
+                        하하하 안녕하다. 22222
+
+                    </p>
+                </div>
+                <div class="rolling">
+                    <p>
+                        하하하 안녕하십니까3
+
+                    </p>
+                    <p>
+                        하하하 안녕합니다 33333
+
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="main" class="mainwraperr">
+
+        <div class="list_box list_1_wrapper">
+
+            <div>
+                <h1>
+                    오늘의 뭐할까? 추천하는
+                    <br>
+                    </br>
+                    클래스 알아보기
+                </h1>
+
+
+            </div>
+
+            <div>
+                <h1>
+                    오늘 뭐할까?
+                    <br>
+                    </br>
+                    알아보기
+                </h1>
+
+            </div>
+
+
+        </div>
+        <div class="list_box">
+            <div class="listheader"></div>
+            <div class="list_swiper">
+                <div class="list_swiper_img_area">
+
+                </div>
+                <div class="list_swiper_img_area">
+
+                </div>
+                <div class="list_swiper_img_area">
+
+                </div>
+
+                <div class="list_swiper_img_area">
+
+                </div>
+                <div class="list_swiper_img_area">
+
+                </div>
+                <div class="list_swiper_img_area">
+
+                </div>
+            </div>
+
+        </div>
+        <div class="list_box">
+
+
+        </div>
+    </div>
+
+</body>
+
+</html>

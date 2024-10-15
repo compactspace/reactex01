@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.8.18/themes/base/jquery-ui.css" type="text/css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<script>
+var btnarray=[]
+var quotient;
+var rest;
+var multiple;
+window.onload=()=>
+{
+        quotient=Math.floor(29/5);
+        rest=Math.floor(29%5);
+        // multiple=btnarray.length-rest
+        btnarray.length=281;
+        let x=Math.floor(btnarray.length/10)+Math.floor(btnarray.length%10)
+        console.log("x->>"+x);
+        
+    for(let i=0; i<btnarray.length; i++){
+    btnarray[i]=i+1;
+    
+    }    
+
+
+
+    let str= ' ';
+    $(btnarray).each((index,obj)=>{
+    
+    if(index+1<=5){  
+        str +='<button class="btn" data-val>'+obj+'</button>';
+        // console.log(str)
+    
+    }
+    
+    })
+    $(".btndiv").html(str);   
+
+
+    $(".next").on("click",()=>{
+        let check=parseInt($("button[class=btn]").last().text());
+        console.log("체크->>"+check);
+        let  lastpage=lastpagecheck(check);
+        if(lastpage){
+            lastpagefnc(check);
+            $(".next").attr("disabled",true);
+            alert("마지막페이지입니다.!")
+        }else{
+            btnarrayfnc(check);
+    
+        }
+    })
+
+
+    $(".back").on("click",()=>{
+        $(".next").attr("disabled",false)
+        let check=parseInt($("button[class=btn]").first().text());
+    console.log("뒤로가기체크->"+check)
+    if(check==1){
+        alert("처음페이지입니다.!")
+    }else{
+    let backstr=''
+    for(let i=(check-5); i<=check-1; i++){
+        console.log(i)
+        backstr +='<button class="btn" data-val>'+(i)+'</button>';
+    }
+    $(".btndiv").html(backstr); 
+
+    }
+
+    })
+
+
+
+
+}
+
+function  btnarrayfnc(check){
+
+   let nextstr =' ';
+    for(let i=check+1; i<=check+5; i++){
+        nextstr +='<button class="btn" data-val>'+(i)+'</button>';
+  btnarray[i]=i+1;
+ //console.log(btnarray);
+} 
+$(".btndiv").html(nextstr);   
+
+
+}
+
+function  lastpagecheck(check){
+    // console.log(btnarray);
+
+    // console.log("값->"+btnarray[(check+5)-1])
+ 
+    // console.log("널이투루?->"+(btnarray[(check+5)-1]==null))
+    if(btnarray[(check+5)-1]==null){
+      
+        return true;
+    }else{
+        return false;
+    }
+}
+
+function  lastpagefnc(check){
+
+let nextstr =' ';
+ for(let i=check+1; i<=check+rest; i++){
+     nextstr +='<button class="btn" data-val>'+(i)+'</button>';
+btnarray[i]=i+1;
+// console.log(btnarray);
+} 
+$(".btndiv").html(nextstr);   
+
+
+}
+
+
+</script>    
+</head>
+<body>
+    <button class="back">이전</button>
+    <div class="btndiv">
+<!-- <button class="btn" data-val></button>
+<button class="btn" data-val></button>
+<button class="btn" data-val></button>
+<button class="btn"data-val></button>
+<button class="btn" data-val></button> -->
+</div>
+<button class="next">다음</button>
+</div>
+</body>
+</html>
