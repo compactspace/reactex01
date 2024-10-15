@@ -20,7 +20,7 @@ export const TestLogin = () => {
         if (id != undefined && id != null) {
 
 
-            axios.get('http://localhost:4000/testlogin?id=' + id).then((res) => {
+            axios.get('http:192.168.0.52:4000/testlogin?id=' + id).then((res) => {
 
                 alert("?")
                 if (res.data.status != -1) {
