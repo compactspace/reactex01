@@ -58,7 +58,8 @@ import oneday57 from '../img2/oneday57.jpg'
 
 
 
-
+axios.defaults.headers['Access-Control-Allow-Origin'] = '*';
+ axios.defaults.baseURL = "https:192.168.0.52:4000";
 
 export const OneDayClasspage = () => {
 
@@ -78,7 +79,7 @@ export const OneDayClasspage = () => {
     let detailinfoarr;
     useEffect(() => {
         axios
-            .post("http://localhost:4000/noneuser/OneDayClasspage", JSON.stringify(data), {
+            .post("/noneuser/OneDayClasspage", JSON.stringify(data), {
                 headers: {
                     "Content-Type": `application/json`,
                 },
