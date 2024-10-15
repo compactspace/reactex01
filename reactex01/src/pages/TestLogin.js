@@ -2,7 +2,7 @@
 import axios from "axios"
 import { useNavigate } from "react-router-dom";
 axios.defaults.headers['Access-Control-Allow-Origin'] = '*';
- axios.defaults.baseURL = "http://localhost:3000";
+ // axios.defaults.baseURL = "http://localhost:3000";
 export const TestLogin = () => {
     let navi = useNavigate();
 
@@ -41,7 +41,7 @@ export const TestLogin = () => {
 
 
             }).catch((err)=>{
-                console.log(JSON.stringify(err));
+               alert(JSON.stringify(err));
             })
 
 // const PROXY ='/proxy';
