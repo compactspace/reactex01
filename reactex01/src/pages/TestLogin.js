@@ -16,7 +16,7 @@ export const TestLogin = () => {
         if (id != undefined && id != null) {
 
 
-            axios.get('https://calm-shortbread-d2aa50.netlify.app:4000/testlogin?id=' + id).then((res) => {
+            axios.get('http://localhost:4000/testlogin?id=' + id).then((res) => {
 
                 alert("왓더퍽")
                 if (res.data.status != -1) {
