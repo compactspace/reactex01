@@ -14,7 +14,7 @@ export const TestLogin = () => {
 
     const Login = () => {
 
-        alert(window.location.hostname);
+        alert(window.location.host);
         
         if (id != undefined && id != null) {
 
