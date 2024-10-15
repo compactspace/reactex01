@@ -624,7 +624,7 @@ export const OneDayClassBody = (props) => {
 
             let limit = (`${review.backbuttoncnt}`);
 
-            let url = 'http://localhost:4000/user/backreivew?limit=' + limit + '&onedayclass_num=' + `${props.onedayclass_num}`
+            let url = '/user/backreivew?limit=' + limit + '&onedayclass_num=' + `${props.onedayclass_num}`
                 + "&start_flag=" + `${review.start_flag}`
             axios.get(url).then((res) => {
 
