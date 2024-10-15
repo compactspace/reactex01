@@ -45,7 +45,38 @@ export const TestLogin = () => {
 
 const PROXY ='/proxy';
 
+ axios.post(PROXY+'/testlogin2',data,{headers}).then((res) => {
 
+                alert("왓더퍽")
+                
+                if (res.data.status != -1) {
+                    window.localStorage.setItem("id", id);
+
+                    if (res.data.teacher != null && res.data.teacher != undefined) {
+                        window.localStorage.setItem("teacher", "teacher");
+                        window.localStorage.setItem("onedayclass_num",3);                        
+                        navi('/openclass');
+                        return;
+                    }
+                    navi('/main2')
+
+                } else {
+                    alert("아이디는 신원찬 과 큐티민지 뿐입니다.!")
+
+                }
+
+
+            }).catch((err)=>{
+                alert(JSON.stringify(err));
+            })
+
+
+
+
+
+
+
+            
             
   let data={"id":id};
 
