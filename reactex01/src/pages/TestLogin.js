@@ -45,6 +45,11 @@ export const TestLogin = () => {
 
 const PROXY ='/proxy';
 
+  let data={"id":id};
+
+            let headers={"content-type":"applcation/json"}
+
+            
  axios.post(PROXY+'/testlogin2',data,{headers}).then((res) => {
 
                 alert("왓더퍽")
@@ -78,9 +83,7 @@ const PROXY ='/proxy';
 
             
             
-  let data={"id":id};
 
-            let headers={"content-type":"applcation/json"}
         
             
             axios.post('http://localhost:4000/testlogin2',data,{headers}).then((res) => {
