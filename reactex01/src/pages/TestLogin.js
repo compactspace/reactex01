@@ -13,6 +13,9 @@ export const TestLogin = () => {
     }
 
     const Login = () => {
+
+        alert(window.location.hostname);
+        
         if (id != undefined && id != null) {
 
 
