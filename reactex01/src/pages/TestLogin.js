@@ -14,7 +14,7 @@ export const TestLogin = () => {
 
     const Login = () => {
 
-        alert(window.location.host);
+     
         
         if (id != undefined && id != null) {
 
@@ -40,7 +40,7 @@ export const TestLogin = () => {
 
 
             }).catch((err)=>{
-                alert(JSON.stringify(err));
+                console.log(JSON.stringify(err));
             })
 
 
