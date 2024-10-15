@@ -22,7 +22,7 @@ export const TestLogin = () => {
 
             axios.get('/testlogin?id=' + id).then((res) => {
 
-                alert("?")
+                alert(res);
                 if (res.data.status != -1) {
                     window.localStorage.setItem("id", id);
 
