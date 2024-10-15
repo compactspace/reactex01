@@ -20,9 +20,77 @@ export const TestLogin = () => {
         if (id != undefined && id != null) {
 
 
-            // axios.get('http://localhost:4000/testlogin?id=' + id).then((res) => {
+            axios.get('http://localhost:4000/testlogin?id=' + id).then((res) => {
 
-            //     alert("?")
+                alert("?")
+                if (res.data.status != -1) {
+                    window.localStorage.setItem("id", id);
+
+                    if (res.data.teacher != null && res.data.teacher != undefined) {
+                        window.localStorage.setItem("teacher", "teacher");
+                        window.localStorage.setItem("onedayclass_num",3);                        
+                        navi('/openclass');
+                        return;
+                    }
+                    navi('/main2')
+
+                } else {
+                    alert("아디디는 신원찬 이라니깐?");
+
+                }
+
+
+            }).catch((err)=>{
+                console.log(JSON.stringify(err));
+            })
+
+// const PROXY ='/proxy';
+
+//   let data={"id":id};
+
+//             let headers={"content-type":"applcation/json"}
+
+           
+//  axios.post('http://localhost:4000/testlogin2',data,{headers}).then((res) => {
+
+               
+                
+//                 if (res.data.status != -1) {
+//                     window.localStorage.setItem("id", id);
+
+//                     if (res.data.teacher != null && res.data.teacher != undefined) {
+//                         window.localStorage.setItem("teacher", "teacher");
+//                         window.localStorage.setItem("onedayclass_num",3);                        
+//                         navi('/openclass');
+//                         return;
+//                     }
+//                     navi('/main2')
+
+//                 } else {
+//                     alert("아이디는 신원찬 과 큐티민지 뿐입니다.!")
+
+//                 }
+
+
+//             }).catch((err)=>{
+//                 alert(JSON.stringify(err));
+//             })
+
+
+
+
+
+
+
+            
+            
+
+        
+            
+            // axios.post('http://localhost:4000/testlogin2',data,{headers}).then((res) => {
+
+                
+                
             //     if (res.data.status != -1) {
             //         window.localStorage.setItem("id", id);
 
@@ -41,76 +109,8 @@ export const TestLogin = () => {
 
 
             // }).catch((err)=>{
-            //     console.log(JSON.stringify(err));
+            //     alert(JSON.stringify(err));
             // })
-
-const PROXY ='/proxy';
-
-  let data={"id":id};
-
-            let headers={"content-type":"applcation/json"}
-
-           
- axios.post('http://localhost:4000/testlogin2',data,{headers}).then((res) => {
-
-               
-                
-                if (res.data.status != -1) {
-                    window.localStorage.setItem("id", id);
-
-                    if (res.data.teacher != null && res.data.teacher != undefined) {
-                        window.localStorage.setItem("teacher", "teacher");
-                        window.localStorage.setItem("onedayclass_num",3);                        
-                        navi('/openclass');
-                        return;
-                    }
-                    navi('/main2')
-
-                } else {
-                    alert("아이디는 신원찬 과 큐티민지 뿐입니다.!")
-
-                }
-
-
-            }).catch((err)=>{
-                alert(JSON.stringify(err));
-            })
-
-
-
-
-
-
-
-            
-            
-
-        
-            
-            axios.post('http://localhost:4000/testlogin2',data,{headers}).then((res) => {
-
-                
-                
-                if (res.data.status != -1) {
-                    window.localStorage.setItem("id", id);
-
-                    if (res.data.teacher != null && res.data.teacher != undefined) {
-                        window.localStorage.setItem("teacher", "teacher");
-                        window.localStorage.setItem("onedayclass_num",3);                        
-                        navi('/openclass');
-                        return;
-                    }
-                    navi('/main2')
-
-                } else {
-                    alert("아이디는 신원찬 과 큐티민지 뿐입니다.!")
-
-                }
-
-
-            }).catch((err)=>{
-                alert(JSON.stringify(err));
-            })
 
 
 
