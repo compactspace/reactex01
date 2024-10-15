@@ -19,9 +19,9 @@ export const TestLogin = () => {
         if (id != undefined && id != null) {
 
 
-            axios.get('http://locallhost:4000/testlogin?id=' + id).then((res) => {
+            axios.get('http://localhost:4000/testlogin?id=' + id).then((res) => {
 
-                alert("왓더퍽")
+                alert("?")
                 if (res.data.status != -1) {
                     window.localStorage.setItem("id", id);
 
