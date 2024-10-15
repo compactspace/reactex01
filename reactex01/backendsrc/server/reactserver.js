@@ -32,7 +32,7 @@ app.use(bodyParser.urlencoded({ extended: true })) // for parsing application/x-
 // 또이놈은 리엑트의 포트 3000 을 허용해주겠다는거임 에휴 씨발
 //https://velog.io/@diorjj/React-CORS-%EC%97%90%EB%9F%AC-%ED%95%B4%EA%B2%B0%ED%95%98%EA%B8%B0
 //위 사이트가 그나마 cors 오리진 해결책준다...
-app.use(cors({ origin: ['http://localhost:3000','http://'+`${process.env.REACT_APP_SMARTPHONE_IP}`+':3000'], credentials: true }));
+app.use(cors({ origin: ['http://localhost:3000','https://calm-shortbread-d2aa50.netlify.app','http://'+`${process.env.REACT_APP_SMARTPHONE_IP}`+':3000'], credentials: true }));
 
 //잠시 상식 app.use 를 해야 url경로가 쌓이면서 진행되는 것임
 //즉 app.use '/경로이름' 해야 /경로이름/경로/경로.. 이런식으로 쌓임
