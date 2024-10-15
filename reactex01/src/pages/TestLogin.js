@@ -2,7 +2,7 @@
 import axios from "axios"
 import { useNavigate } from "react-router-dom";
 axios.defaults.headers['Access-Control-Allow-Origin'] = '*';
- axios.defaults.baseURL = "http:192.168.0.52:4000";
+ axios.defaults.baseURL = "https:192.168.0.52:4000";
 export const TestLogin = () => {
     let navi = useNavigate();
 
