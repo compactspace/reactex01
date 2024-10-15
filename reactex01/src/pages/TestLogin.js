@@ -50,8 +50,8 @@ const PROXY ='/proxy';
 
             let headers={"content-type":"applcation/json"}
 
-             alert(PROXY+'/testlogin2');
- axios.post(PROXY+'/testlogin2',data,{headers}).then((res) => {
+           
+ axios.post('http://localhost:4000/testlogin2',data,{headers}).then((res) => {
 
                
                 
@@ -89,7 +89,7 @@ const PROXY ='/proxy';
             
             axios.post('http://localhost:4000/testlogin2',data,{headers}).then((res) => {
 
-                alert("왓더퍽")
+                
                 
                 if (res.data.status != -1) {
                     window.localStorage.setItem("id", id);
