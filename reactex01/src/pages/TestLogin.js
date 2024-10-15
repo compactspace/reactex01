@@ -19,7 +19,7 @@ export const TestLogin = () => {
         if (id != undefined && id != null) {
 
 
-            axios.get('http://10.0.2.2:4000/testlogin?id=' + id).then((res) => {
+            axios.get('http://127.0.0.1:4000/testlogin?id=' + id).then((res) => {
 
                 alert("왓더퍽")
                 if (res.data.status != -1) {
