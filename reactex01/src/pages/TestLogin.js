@@ -2,7 +2,7 @@
 import axios from "axios"
 import { useNavigate } from "react-router-dom";
 axios.defaults.headers['Access-Control-Allow-Origin'] = '*';
-// axios.defaults.baseURL = "https://calm-shortbread-d2aa50.netlify.app";
+ axios.defaults.baseURL = "http://localhost:3000";
 export const TestLogin = () => {
     let navi = useNavigate();
 
